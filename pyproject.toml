@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyber-vault"
+version = "1.1.0"
+description = "A defensive, isolated incident-response training simulator for the terminal."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+cyber-vault = "cyber_vault:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = [
+    "branding",
+    "models",
+    "generator",
+    "detector",
+    "firewall",
+    "session",
+    "commands",
+    "cyber_vault",
+]
